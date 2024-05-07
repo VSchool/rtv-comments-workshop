@@ -4,7 +4,7 @@ import { useState } from 'react';
 function CommentForm() {
 
     const [formData, setFormData] = useState({
-        commentText: ''
+        text: ''
     })
 
     function handleChange(e){
@@ -20,15 +20,15 @@ function CommentForm() {
     function handleSubmit(e){
         e.preventDefault()
         console.log(formData)
-        setFormData({commentText: ''})
+        setFormData({text: ''})
     }
 
     return ( 
         <form onSubmit={handleSubmit}>
             <input 
             placeholder='Comment'
-            name='commentText'
-            value={formData.commentText}
+            name='text'
+            value={formData.text}
             onChange={handleChange}
             />
             <button>Leave Comment</button>

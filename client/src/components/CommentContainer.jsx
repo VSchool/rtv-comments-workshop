@@ -14,7 +14,7 @@ function CommentContainer() {
         <div>
             <CommentForm />
             <button onClick={toggleView}>{isHidden ? 'Show Comments' : 'Hide Comments'}</button>
-            {isHidden && <CommentList />}
+            {!isHidden && <CommentList />}
         </div>
      );
 }
